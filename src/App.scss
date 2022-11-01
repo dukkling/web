@@ -28,6 +28,11 @@ main {
   justify-content: center;
   min-height: 75vh;
 
+  h2,
+  h3 {
+    color: #fff;
+  }
+
   .founders {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -46,8 +51,21 @@ main {
         font-size: calc(12px + 1vmin);
         margin-top: -3rem;
         margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .job-title {
+          display: inline-flex;
+        }
       }
     }
+  }
+
+  .vision {
+    color: #f5f3ce;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
   }
 
   .about {
@@ -59,9 +77,11 @@ main {
       font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
         sans-serif;
       line-height: calc(12px + 5vmin);
+      display: block;
     }
 
     .punchline {
+      display: block;
       color: #fff;
     }
   }
@@ -69,6 +89,8 @@ main {
 
 footer {
   min-height: 10vh;
+  color: #fff;
+  font-weight: 600;
 
   section {
     display: flex;
@@ -77,6 +99,10 @@ footer {
 
     .logo {
       height: 5vmin;
+    }
+
+    a {
+      color: #fff;
     }
   }
 }

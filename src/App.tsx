@@ -15,39 +15,56 @@ const App = () => {
       <main className="main">
         <section className="about">
           <h2>
-            We want to make the app that we were missing when we first became
+            Dukkling is the app that we were missing when we first became
             mothers.
             <span className="no-breaks">
               There are no breaks in parenting.{" "}
             </span>
             <span className="punchline">
-              We are making an app that keeps track of information, needs,
-              schedules and tasks related to children.
+              We are currently making an app that keeps track of information,
+              needs, schedules and tasks related to children.
             </span>
           </h2>
         </section>
         <section className="founders">
           <figure>
             <img src={ellen} className="portrait" alt="portrait" />
-            <figcaption>Ellen Wagnild-Antonsen</figcaption>
+            <figcaption>
+              Ellen Wagnild-Antonsen <span className="job-title">CDO</span>
+            </figcaption>
           </figure>
           <figure>
             <img src={hanneli} className="portrait" alt="portrait" />
-            <figcaption>Hanneli Mustaparta</figcaption>
+            <figcaption>
+              Hanneli Mustaparta <span className="job-title">CMO</span>
+            </figcaption>
           </figure>
           <figure>
             <img src={martine} className="portrait" alt="portrait" />
-            <figcaption>Martine Rostadmo</figcaption>
+            <figcaption>
+              Martine Rostadmo <span className="job-title">CEO</span>
+            </figcaption>
           </figure>
           <figure>
             <img src={sarah} className="portrait" alt="portrait" />
-            <figcaption>Sarah Serussi</figcaption>
+            <figcaption>
+              Sarah Serussi <span className="job-title">CTO</span>
+            </figcaption>
           </figure>
+        </section>
+        <section className="vision">
+          <h3>
+            Dukkling digitalizes the most important part of your life so that
+            you can be present
+          </h3>
+          <p></p>
         </section>
       </main>
       <footer>
         <section>
-          <p>Contact: hello@dukkling.com</p>
+          <p>
+            Contact: <a href="mailto:hello@dukkling.com">hello@dukkling.com</a>
+          </p>
           <img src={logo} className="logo" alt="logo" />
         </section>
       </footer>
