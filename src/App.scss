@@ -1,19 +1,14 @@
 .App {
+  height: 100vh;
   text-align: center;
-}
-
-.portrait {
-  height: 25vmin;
-  padding: 2rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header" "main" "footer";
 }
 
 header {
-  background-color: #455db5;
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  grid-area: header;
+  background-color: rgb(254, 109, 1);
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -23,79 +18,122 @@ header {
 }
 
 main {
-  background-color: #455db5;
+  grid-area: main;
+  background: linear-gradient(rgba(254, 109, 1, 1), rgba(244, 2, 144, 1));
   display: grid;
   justify-content: center;
-  min-height: 75vh;
+  padding: 1rem 35vmin;
 
-  h2,
-  h3 {
+  @media screen and (max-width: 992px) {
+    padding: 0rem;
+  }
+
+  .about {
+    display: block;
     color: #fff;
+    text-align: left;
+    font-weight: 500;
+    font-size: calc(14px + 1vmin);
+  }
+
+  .testing {
+    display: block;
+    color: #000;
+    text-align: left;
+    font-weight: 500;
+    font-size: calc(14px + 1vmin);
+    border-radius: 4px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    padding: 0 1rem 1rem 1rem;
+
+    a {
+      background-color: rgba(244, 2, 144, 1);
+      color: #fff;
+      padding: 0.25rem;
+      border-radius: 4px;
+    }
+
+    .checklist {
+      list-style: none;
+
+      li {
+        padding-top: 0.5rem;
+        margin-left: -2rem;
+      }
+    }
+  }
+
+  .whoarewe {
+    text-align: left;
+    padding: 0 1rem;
+    margin-top: 1rem;
+    color: #000;
+    font-size: calc(12px + 1vmin);
+    border-radius: 4px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   }
 
   .founders {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    padding: 3rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    .portrait {
+      height: 20vmin;
+    }
 
     figure {
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-
+      justify-self: center;
       img {
+        padding: 2rem;
+        width: 20vmin;
+        border-radius: 50%;
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
       }
 
       figcaption {
+        padding-top: 1rem;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: calc(12px + 1vmin);
-        margin-top: -3rem;
-        margin-bottom: 1rem;
+        font-size: calc(10px + 1vmin);
+        font-weight: 600;
         display: flex;
         flex-direction: column;
         align-items: center;
 
         .job-title {
           display: inline-flex;
+          font-weight: 400;
         }
       }
     }
   }
 
   .vision {
-    color: #f5f3ce;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-      sans-serif;
-  }
-
-  .about {
-    padding: 0 10vmin;
-
-    .no-breaks {
-      color: #f5f3ce;
-      padding: 0 2rem;
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-      line-height: calc(12px + 5vmin);
-      display: block;
-    }
+    color: #eee;
 
     .punchline {
+      font-size: calc(14px + 1vmin);
+      line-height: calc(12px + 5vmin);
       display: block;
-      color: #fff;
+      padding: 1rem;
     }
   }
 }
 
 footer {
-  min-height: 10vh;
+  grid-area: footer;
+  min-height: 7vh;
   color: #fff;
   font-weight: 600;
+  padding: 1rem 35vmin;
+
+  @media screen and (max-width: 992px) {
+    padding: 1rem;
+  }
 
   section {
     display: flex;
     justify-content: space-between;
-    padding: 0 2rem;
+    align-items: center;
 
     .logo {
       height: 5vmin;
