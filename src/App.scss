@@ -57,7 +57,6 @@ main {
   .whoarewe {
     text-align: left;
     padding: 0 1rem;
-    margin-top: 1rem;
     color: #424242;
     font-size: calc(12px + 1vmin);
     border-radius: 4px;
@@ -65,22 +64,23 @@ main {
 
   .founders {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, 250px);
+
+    @media screen and (max-width: 624px) {
+      grid-template-columns: repeat(auto-fit, 150px);
+    }
 
     .portrait {
-      height: 20vmin;
+      height: 22vmin;
     }
 
     figure {
-      justify-self: center;
       img {
-        width: 20vmin;
+        width: 22vmin;
         border-radius: 50%;
-        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
       }
 
       figcaption {
-        padding-top: 1rem;
         font-family: Arial, Helvetica, sans-serif;
         font-size: calc(10px + 1vmin);
         font-weight: 600;
