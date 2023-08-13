@@ -8,9 +8,9 @@
 
 header {
   grid-area: header;
-  background-color: rgb(254, 109, 1);
+  background-color: rgb(252, 252, 252);
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #424242;
 }
 
 .link {
@@ -19,7 +19,7 @@ header {
 
 main {
   grid-area: main;
-  background: linear-gradient(rgba(254, 109, 1, 1), rgba(244, 2, 144, 1));
+  background: rgb(252, 252, 252);
   display: grid;
   justify-content: center;
   padding: 1rem 35vmin;
@@ -30,7 +30,7 @@ main {
 
   .about {
     display: block;
-    color: #fff;
+    color: #424242;
     text-align: left;
     font-weight: 500;
     font-size: calc(14px + 1vmin);
@@ -39,39 +39,30 @@ main {
 
   .testing {
     display: block;
-    color: #000;
+    color: #424242;
     text-align: left;
     font-weight: 500;
     font-size: calc(14px + 1vmin);
     border-radius: 4px;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     padding: 0 1rem 1rem 1rem;
 
     a {
-      background-color: rgba(244, 2, 144, 1);
-      color: #fff;
+      background-color: rgb(186, 193, 255);
+      color: #424242;
       padding: 0.25rem;
       border-radius: 4px;
     }
 
-    .checklist {
-      list-style: none;
-
-      li {
-        padding-top: 0.5rem;
-        margin-left: -2rem;
-      }
-    }
+   
   }
 
   .whoarewe {
     text-align: left;
     padding: 0 1rem;
     margin-top: 1rem;
-    color: #000;
+    color: #424242;
     font-size: calc(12px + 1vmin);
     border-radius: 4px;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   }
 
   .founders {
@@ -109,7 +100,7 @@ main {
   }
 
   .vision {
-    color: #eee;
+    color: #424242;
 
     .punchline {
       font-size: calc(14px + 1vmin);
@@ -141,7 +132,7 @@ footer {
     }
 
     a {
-      color: #fff;
+      color: #424242;
     }
   }
 }
